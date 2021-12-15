@@ -1,0 +1,39 @@
+
+.my-card:hover{
+   background-image: linear-gradient(rgb(0, 69, 255) 0%, rgb(189, 41, 242) 100%);
+   color: white;
+  
+}
+
+.my-card i{
+   font-size: 40px;
+   background-color: transparent;
+   border-radius: 50px;
+   width: 80px;
+   height:80px;
+   margin: auto;
+   margin-top: 20px;
+   color: white;
+   text-align: center;
+   padding: 20px 0px 20px ;
+   background-image: linear-gradient(rgb(0, 69, 255) 0%, rgb(189, 41, 242) 100%);
+   transition: all 0.6s ease 0s;
+
+}
+
+.my-card:hover i{
+   background-color: transparent;
+   background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+   color: rgb(39, 39, 253);
+}
+
+.my-card {
+   border: none;
+   height: 0%;
+   transition: all 0.6s ease 0s;
+}
+
+.my-card:hover {
+   height: 100%;
+   transform: rotate(0deg) scale(1);
+}

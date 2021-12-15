@@ -1,0 +1,48 @@
+.navigation {
+  background-color: transparent;
+}
+.navigation a {
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.logo:hover {
+  border-bottom: none !important;
+}
+.navigation a:hover {
+  color: rgb(192, 192, 192);
+  border-bottom: 5px solid white;
+}
+
+.active {
+  background-color: rgb(4, 29, 255);
+}
+.active a {
+  background-color: rgb(4, 29, 255);
+  color: rgb(255, 255, 255);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.active a:hover {
+  color: rgb(171, 171, 172);
+}
+
+.offcanvas a {
+  color: #ffffff;
+}
+
+.offcanvas {
+  width: 270px;
+  background-color: black;
+  color: white;
+}
+
+.btn-close {
+  background-color: white;
+}

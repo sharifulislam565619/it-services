@@ -1,0 +1,11 @@
+.project img {
+  overflow: hidden;
+  height: 380px;
+  transition: 1s;
+}
+.project img:hover {
+  transform: scale(150%);
+}
+.project {
+  overflow: hidden;
+}

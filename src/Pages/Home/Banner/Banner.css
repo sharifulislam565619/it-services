@@ -1,0 +1,27 @@
+.banner {
+  margin-top: -106px;
+  margin-bottom: 60px;
+  background-image: linear-gradient(
+    90deg,
+    rgb(0, 69, 255) 0%,
+    rgb(189, 41, 242) 100%
+  );
+}
+.banner img {
+  opacity: 0.6;
+  height: 100vh;
+  animation: thing 15s;
+}
+
+@keyframes thing {
+  form {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.4, 1.4);
+  }
+}
+
+.carousel-indicators {
+  display: none;
+}
