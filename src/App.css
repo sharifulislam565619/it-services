@@ -7,6 +7,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+[id] {
+  scroll-margin-top: 66px;
+}
 
 a {
   text-decoration: none;

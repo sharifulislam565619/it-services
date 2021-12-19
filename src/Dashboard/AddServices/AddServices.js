@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const AddServices = () => {
    const { register, handleSubmit, reset, formState: { errors } } = useForm();
    const onSubmit = data => {
-      fetch('http://localhost:5000/services', {
+      fetch('https://young-hamlet-32330.herokuapp.com/services', {
          method: "POST",
          headers: {
             'content-type': 'application/json'

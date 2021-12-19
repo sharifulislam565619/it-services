@@ -7,7 +7,7 @@ const Service = ({ service }) => {
    const { title, desc, img, price } = service
    return (
 
-      <Col data-aos="zoom-in">
+      <Col data-aos="zoom-in" id="services">
          <Card className="my-card" style={{ width: '18rem' }}>
 
 

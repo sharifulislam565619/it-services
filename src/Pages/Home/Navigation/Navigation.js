@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
-import { Container, Navbar, NavLink, Offcanvas } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Nav, Navbar, NavLink, Offcanvas } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
+import useAuth from '../../../hooks/useAuth';
+import userPhoto from '../../../images/userPhoto.png';
 import './Navigation.css';
 
 
 const Navigation = () => {
+   const { user, logOut, uri } = useAuth()
    const [show, setShow] = useState(false);
    const handleClose = () => setShow(false);
    const handleShow = () => setShow(true);
    const [navbar, setNavbar] = useState(true)
+
+   const navigate = useNavigate()
 
    const changeBg = () => {
       if (window.scrollY >= 80) {
@@ -32,18 +38,19 @@ const Navigation = () => {
 
 
                <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
-                  <Link to="/home">Home</Link>
-                  <Link to="/home">Services</Link>
-                  <Link to="/home">About us</Link>
-                  <Link to="/home">Contact us</Link>
-                  <Link to="/dashboard">Dashboard</Link>
-                  {/*   {user?.email && <Link to="/dashboard">Dashboard</Link>}
+
+                  <Nav.Link as={NavHashLink} className="nav_before" to="/#banner"><span>Home</span></Nav.Link>
+                  <Nav.Link as={NavHashLink} className="nav_before" to="/#services"><span>Services</span></Nav.Link>
+                  <Nav.Link as={NavHashLink} className="nav_before" to="/#about" ><span>About</span></Nav.Link>
+                  <Nav.Link as={NavHashLink} className="nav_before" to="/#contact"><span>Contact</span></Nav.Link>
+
+                  {user?.email && <Link to="/dashboard">Dashboard</Link>}
                   {user?.email ? <div>
-                     <small className="displayName">{user?.displayName}</small>
+                     <small className="displayName" style={{ color: "yellow", fontStyle: "italic", marginRight: "5px" }}>{user?.displayName}</small>
                      <small><img style={{ width: "50px", borderRadius: "50%", marginRight: "5px" }} src={user?.photoURL || userPhoto} alt="" /></small>
-                     <button onClick={() => logOut(history, uri)} className="btn my-button"><i className="fas fa-sign-out-alt"></i> Log out</button>
+                     <button onClick={() => logOut(navigate, uri)} className="btn my-button text-white"><i className="fas fa-sign-out-alt "></i> Log out</button>
                   </div> :
-                     <Link to="/login" className="btn my-button"><i className="fas fa-sign-in-alt"></i> Login</Link>} */}
+                     <Link to="/login" className="btn my-button"><i className="fas fa-sign-in-alt"></i> Login</Link>}
                </Navbar.Collapse>
             </Container>
          </Navbar>
